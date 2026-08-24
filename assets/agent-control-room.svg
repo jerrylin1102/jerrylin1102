@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">Jerry Lin — AI Systems Engineer</title>
+  <desc id="desc">An animated agent control room connecting RAG, memory, tools, interfaces, data, and cloud infrastructure.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" class="bg-start" />
+      <stop offset="1" class="bg-end" />
+    </linearGradient>
+    <radialGradient id="coreGlow">
+      <stop offset="0" class="glow-start" />
+      <stop offset="1" class="glow-end" />
+    </radialGradient>
+    <linearGradient id="accentLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf" />
+      <stop offset="1" stop-color="#818cf8" />
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" class="grid-line" fill="none" />
+    </pattern>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="1" y="1" width="1198" height="458" rx="26" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .bg-start { stop-color: #07111f; }
+    .bg-end { stop-color: #111827; }
+    .glow-start { stop-color: #2dd4bf; stop-opacity: .18; }
+    .glow-end { stop-color: #2dd4bf; stop-opacity: 0; }
+    .grid-line { stroke: #94a3b8; stroke-opacity: .055; stroke-width: 1; }
+    .frame { fill: none; stroke: #334155; }
+    .text-main { fill: #f8fafc; }
+    .text-muted { fill: #94a3b8; }
+    .text-soft { fill: #cbd5e1; }
+    .panel { fill: #0f172a; fill-opacity: .86; stroke: #334155; }
+    .node { fill: #111c2e; stroke: #475569; }
+    .connector { fill: none; stroke: #475569; stroke-width: 1.5; stroke-dasharray: 5 7; animation: dash 12s linear infinite; }
+    .orbit { fill: none; stroke: #2dd4bf; stroke-opacity: .28; stroke-width: 1; stroke-dasharray: 3 8; }
+    .status-dot { animation: pulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .core-ring { animation: breathe 3.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .scan { animation: scan 7s ease-in-out infinite; }
+    .runner { fill: #5eead4; filter: url(#softGlow); }
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+
+    @keyframes dash { to { stroke-dashoffset: -120; } }
+    @keyframes pulse { 0%, 100% { opacity: .45; transform: scale(.82); } 50% { opacity: 1; transform: scale(1.25); } }
+    @keyframes breathe { 0%, 100% { opacity: .45; transform: scale(.94); } 50% { opacity: 1; transform: scale(1.04); } }
+    @keyframes scan { 0%, 100% { opacity: 0; transform: translateY(-12px); } 20%, 80% { opacity: .38; } 50% { transform: translateY(86px); } }
+
+    @media (prefers-color-scheme: light) {
+      .bg-start { stop-color: #f8fafc; }
+      .bg-end { stop-color: #eef2ff; }
+      .glow-start { stop-color: #0f766e; stop-opacity: .12; }
+      .grid-line { stroke: #0f172a; stroke-opacity: .07; }
+      .frame { stroke: #cbd5e1; }
+      .text-main { fill: #0f172a; }
+      .text-muted { fill: #64748b; }
+      .text-soft { fill: #334155; }
+      .panel { fill: #ffffff; fill-opacity: .82; stroke: #cbd5e1; }
+      .node { fill: #ffffff; stroke: #cbd5e1; }
+      .connector { stroke: #94a3b8; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .connector, .status-dot, .core-ring, .scan { animation: none; }
+      .scan { display: none; }
+    }
+  </style>
+
+  <g clip-path="url(#cardClip)">
+    <rect width="1200" height="460" fill="url(#background)" />
+    <rect width="1200" height="460" fill="url(#grid)" />
+    <circle cx="934" cy="224" r="260" fill="url(#coreGlow)" />
+    <path d="M0 400 C270 350 420 470 690 415 S1010 350 1200 410" fill="none" stroke="url(#accentLine)" stroke-opacity=".13" stroke-width="42" />
+
+    <g transform="translate(64 48)">
+      <circle class="status-dot" cx="6" cy="6" r="5" fill="#2dd4bf" />
+      <text x="21" y="11" class="text-muted" font-size="13" letter-spacing="2.4">SYSTEM ONLINE / BUILD MODE</text>
+
+      <text x="0" y="91" class="text-main" font-size="58" font-weight="750" letter-spacing="-2">JERRY LIN</text>
+      <rect x="0" y="112" width="468" height="2" rx="1" fill="url(#accentLine)" />
+      <text x="0" y="151" fill="#2dd4bf" font-size="21" font-weight="700" letter-spacing="3">AI SYSTEMS ENGINEER</text>
+
+      <text x="0" y="202" class="text-soft" font-size="19">I build agents that leave the demo</text>
+      <text x="0" y="232" class="text-soft" font-size="19">and enter production.</text>
+
+      <g transform="translate(0 270)">
+        <rect class="panel" width="140" height="38" rx="19" />
+        <circle cx="20" cy="19" r="4" fill="#2dd4bf" />
+        <text x="34" y="24" class="text-soft" font-size="12" font-weight="650">AGENTIC AI</text>
+
+        <rect class="panel" x="152" width="134" height="38" rx="19" />
+        <circle cx="172" cy="19" r="4" fill="#818cf8" />
+        <text x="186" y="24" class="text-soft" font-size="12" font-weight="650">FULL STACK</text>
+
+        <rect class="panel" x="298" width="116" height="38" rx="19" />
+        <circle cx="318" cy="19" r="4" fill="#f59e0b" />
+        <text x="332" y="24" class="text-soft" font-size="12" font-weight="650">CLOUD</text>
+      </g>
+    </g>
+
+    <g>
+      <path id="pathRag" class="connector" d="M908 220C835 178 793 140 749 110" />
+      <path id="pathMemory" class="connector" d="M934 194C929 142 929 105 939 71" />
+      <path id="pathTools" class="connector" d="M964 213C1019 164 1059 146 1097 130" />
+      <path id="pathUi" class="connector" d="M959 249C1023 284 1055 309 1093 338" />
+      <path id="pathData" class="connector" d="M923 257C913 307 902 337 880 378" />
+      <path id="pathCloud" class="connector" d="M892 244C831 276 789 303 752 337" />
+
+      <circle class="runner" r="3">
+        <animateMotion dur="4.5s" repeatCount="indefinite"><mpath href="#pathRag" /></animateMotion>
+      </circle>
+      <circle class="runner" r="3">
+        <animateMotion dur="5.2s" begin="-1.8s" repeatCount="indefinite"><mpath href="#pathTools" /></animateMotion>
+      </circle>
+      <circle class="runner" r="3">
+        <animateMotion dur="4.8s" begin="-3s" repeatCount="indefinite"><mpath href="#pathUi" /></animateMotion>
+      </circle>
+      <circle class="runner" r="3">
+        <animateMotion dur="5.6s" begin="-2.2s" repeatCount="indefinite"><mpath href="#pathCloud" /></animateMotion>
+      </circle>
+
+      <ellipse class="orbit" cx="934" cy="226" rx="232" ry="174" />
+      <ellipse class="orbit" cx="934" cy="226" rx="172" ry="228" transform="rotate(58 934 226)" />
+
+      <g transform="translate(847 139)">
+        <circle class="core-ring" cx="87" cy="87" r="78" fill="none" stroke="#2dd4bf" stroke-opacity=".35" />
+        <circle cx="87" cy="87" r="59" class="panel" stroke-width="2" />
+        <circle cx="87" cy="87" r="42" fill="#2dd4bf" fill-opacity=".09" stroke="#2dd4bf" stroke-opacity=".5" />
+        <path d="M69 87l12 12 25-27" fill="none" stroke="#5eead4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="87" y="134" fill="#5eead4" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="2">AGENT CORE</text>
+        <rect class="scan" x="48" y="42" width="78" height="2" rx="1" fill="#5eead4" />
+      </g>
+
+      <g transform="translate(684 73)">
+        <rect class="node" width="126" height="58" rx="15" />
+        <circle cx="24" cy="29" r="7" fill="#818cf8" fill-opacity=".22" stroke="#818cf8" />
+        <text x="43" y="25" class="text-main" font-size="13" font-weight="700">RAG</text>
+        <text x="43" y="41" class="text-muted" font-size="9">RETRIEVAL</text>
+      </g>
+      <g transform="translate(876 31)">
+        <rect class="node" width="126" height="58" rx="15" />
+        <circle cx="24" cy="29" r="7" fill="#f59e0b" fill-opacity=".22" stroke="#f59e0b" />
+        <text x="43" y="25" class="text-main" font-size="13" font-weight="700">MEMORY</text>
+        <text x="43" y="41" class="text-muted" font-size="9">CONTEXT</text>
+      </g>
+      <g transform="translate(1031 98)">
+        <rect class="node" width="126" height="58" rx="15" />
+        <circle cx="24" cy="29" r="7" fill="#2dd4bf" fill-opacity=".22" stroke="#2dd4bf" />
+        <text x="43" y="25" class="text-main" font-size="13" font-weight="700">TOOLS</text>
+        <text x="43" y="41" class="text-muted" font-size="9">ACTIONS</text>
+      </g>
+      <g transform="translate(1028 315)">
+        <rect class="node" width="126" height="58" rx="15" />
+        <circle cx="24" cy="29" r="7" fill="#f472b6" fill-opacity=".22" stroke="#f472b6" />
+        <text x="43" y="25" class="text-main" font-size="13" font-weight="700">UI</text>
+        <text x="43" y="41" class="text-muted" font-size="9">EXPERIENCE</text>
+      </g>
+      <g transform="translate(817 365)">
+        <rect class="node" width="126" height="58" rx="15" />
+        <circle cx="24" cy="29" r="7" fill="#38bdf8" fill-opacity=".22" stroke="#38bdf8" />
+        <text x="43" y="25" class="text-main" font-size="13" font-weight="700">DATA</text>
+        <text x="43" y="41" class="text-muted" font-size="9">STATE</text>
+      </g>
+      <g transform="translate(682 311)">
+        <rect class="node" width="126" height="58" rx="15" />
+        <circle cx="24" cy="29" r="7" fill="#a78bfa" fill-opacity=".22" stroke="#a78bfa" />
+        <text x="43" y="25" class="text-main" font-size="13" font-weight="700">CLOUD</text>
+        <text x="43" y="41" class="text-muted" font-size="9">DELIVERY</text>
+      </g>
+    </g>
+
+    <g transform="translate(64 414)">
+      <text class="text-muted" font-size="10" letter-spacing="1.8">HARNESS</text>
+      <text x="104" class="text-muted" font-size="10">→</text>
+      <text x="129" class="text-muted" font-size="10" letter-spacing="1.8">AGENT LOOP</text>
+      <text x="257" class="text-muted" font-size="10">→</text>
+      <text x="282" class="text-muted" font-size="10" letter-spacing="1.8">TOOL USE</text>
+      <text x="386" class="text-muted" font-size="10">→</text>
+      <text x="411" class="text-muted" font-size="10" letter-spacing="1.8">EVALUATION</text>
+      <text x="539" class="text-muted" font-size="10">→</text>
+      <text x="564" class="text-muted" font-size="10" letter-spacing="1.8">DELIVERY</text>
+    </g>
+  </g>
+  <rect x="1" y="1" width="1198" height="458" rx="26" class="frame" />
+</svg>
